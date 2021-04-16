@@ -1,6 +1,25 @@
 # ACME PAYMENT CALCULATOR
 
-_Exercise for IOET entry position_
+_Exercise for IOET_
+
+## Run it locally
+
+Follow this steps to run locally
+
+```sh
+git clone
+cd acme_payment_calculator
+python client.py
+```
+
+### Run with docker
+
+```sh
+git clone
+cd acme_payment_calculator
+docker build -t acme-pay .
+docker run --rm acme-pay
+```
 
 ## BACKGROUND
 
@@ -24,15 +43,9 @@ The company ACME offers their employees the flexibility to work the hours they w
 
 The goal of this exercise is to calculate the total that the company has to pay an employee, based on the hours they worked and the times during which they worked. The following abbreviations will be used for entering data:
 
-| abb. | Day       |
-| ---- | --------- |
-| MO   | Monday    |
-| TU   | Tuesday   |
-| WE   | Wednesday |
-| TH   | Thursday  |
-| FR   | Friday    |
-| SA   | Saturday  |
-| SU   | Sunday    |
+| abb. | MO     | TU      | WE        | TH       | FR     | SA       | SU     |
+| ---- | ------ | ------- | --------- | -------- | ------ | -------- | ------ |
+| Day  | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 
 **Input:** the name of an employee and the schedule they worked, indicating the time and hours. This should be a .txt file with at least five sets of data. You can include the data from our two examples below.
 
@@ -40,31 +53,23 @@ The goal of this exercise is to calculate the total that the company has to pay 
 
 For example:
 
-- Case 1:
+**Case 1:**
 
-  **INPUT:**
-
-```md
-RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
 ```
+INPUT:
+RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
 
-**OUTPUT:**
-
-```md
+OUTPUT:
 The amount to pay RENE is: 215 USD
 ```
 
-- Case 2:
+**Case 2:**
 
-**INPUT:**
-
-```md
-ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 ```
+INPUT:
+ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 
-**OUTPUT:**
-
-```md
+OUTPUT:
 The amount to pay ASTRID is: 85 USD
 ```
 
