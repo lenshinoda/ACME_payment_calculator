@@ -77,19 +77,19 @@ The amount to pay ASTRID is: 85 USD
 
 ## SOLUTION
 
-In my solution, I use the Model-View-Controller pattern.
+In my solution, I use the Model-View-Controller pattern. There are three files inside src/ folder:
 
 The [**_Model_**](src/model.py) stores all the information required to run the application like the path of the txt file and payment table.
 
 The [**_View_**](src/view.py) stores the format of the output.
 
-The [**_Controller_**](src/controller.py) is in charge of calculating the total wage for every employee according to data in the Model and displaying it to the stout.
+The [**_Controller_**](src/controller.py) calculates the total that the company has to pay an employee according to data in the Model and displays it to the stout.
 
-Additionally, A file [client.py](client.py) was created to simulate a client request.
+Additionally, the file [client.py](client.py) simulates a client request.
 
 ### Controller Logic
 
-As we can see in the [exercise](#exercise), the only change between the hourly-wage-tables for the [weekday](#monday---friday) and the [weekend](#saturday-and-sunday) is an increment of $5 on weekends. So, the most convenient way to approach this is to calculate the wage for each day (multiplying the worked hours by the corresponding hourly wage) and add $5 to the hourly wage on weekends. The controller iterates each line of the [employee_schedule.txt](employee_schedule.txt) and prints the name of the employee and the total wage. The format of each line is:
+As we can see in the [exercise](#exercise), the only change between the HOURS-COST tables for the [weekday](#monday---friday) and the [weekend](#saturday-and-sunday) is an increment in COST of $5 on weekends. So, the most convenient way to approach this is to calculate the wage for each day (multiplying the worked hours by the corresponding hourly wage) and add $5 to the hourly wage on weekends. The controller iterates each line of the [employee_schedule.txt](employee_schedule.txt) and prints the name of the employee and the total wage. The format of each line is:
 
 | name   | =   | day-string    | ,   | day-string    | ,   | day-string    |
 | ------ | --- | ------------- | --- | ------------- | --- | ------------- |
