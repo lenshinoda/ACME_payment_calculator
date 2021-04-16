@@ -79,11 +79,11 @@ The amount to pay ASTRID is: 85 USD
 
 In my solution, I use the Model-View-Controller pattern.
 
-The [**_Model_**](model.py) stores all the information required to run the application like the path of the txt file and payment table.
+The [**_Model_**](src/model.py) stores all the information required to run the application like the path of the txt file and payment table.
 
-The [**_View_**](view.py) stores the format of the output.
+The [**_View_**](src/view.py) stores the format of the output.
 
-The [**_Controller_**](controller.py) is in charge of calculating the total wage for every employee according to data in the Model and displaying it to the stout.
+The [**_Controller_**](src/controller.py) is in charge of calculating the total wage for every employee according to data in the Model and displaying it to the stout.
 
 Additionally, A file [client.py](client.py) was created to simulate a client request.
 
@@ -100,7 +100,7 @@ In each iteration the controller follows this steps:
 - Split the line by "," and "=" to separate the name and each day-string.
 - For each day-string calculate the worked hours and multiply by the corresponding hourly wage. If the day is ['SA', 'SU'] add $5 to the hourly wage.
 - Get the total wage by adding all the daily wages.
-- Print the total wage and the name of the employee according to the formant in [View](view.py).
+- Print the total wage and the name of the employee according to the formant in [View](src/view.py).
 
 ## Test
 
@@ -110,7 +110,7 @@ For example, what happen what happen if the file has the invalid string '20:00-2
 
 ```python
 import unittest
-import controller as ct
+import src.controller as ct
 
 class Test_Controller(unittest.TestCase):
     def test_time_range_controller(self):

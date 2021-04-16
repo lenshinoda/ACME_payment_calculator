@@ -1,6 +1,6 @@
 import unittest
-import controller as ct
-from model import hours, cost
+import src.controller as ct
+from src.model import hours, cost
 
 
 class Test_Controller(unittest.TestCase):

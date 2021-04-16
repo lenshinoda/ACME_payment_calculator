@@ -1,7 +1,7 @@
 import re
 import sys
-from model import path, hours, cost
-from view import view_format
+from src.model import path, hours, cost
+from src.view import view_format
 
 
 def file_controller(path):
