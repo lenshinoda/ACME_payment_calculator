@@ -106,7 +106,7 @@ In each iteration the controller follows this steps:
 
 The test is implemented in the file [test_controller.py](test_controller.py). This file looks for errors especially in edge cases.
 
-For example, what happen what happen if the file has the invalid string '20:00-25:00':
+For example, what happen if the file has the invalid string '20:00-25:00':
 
 ```python
 import unittest
